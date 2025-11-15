@@ -1,0 +1,162 @@
+<svg width="500" height="250" viewBox="0 0 500 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Dark charcoal background gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c2c2c;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#252525;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a1a;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Vibrant green gradient for mbogo text -->
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00ff88;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#00e677;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00cc6a;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 3D Shadow filter for depth -->
+    <filter id="shadow3D" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="3" dy="3" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.4"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Soft glow for green elements -->
+    <filter id="greenGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background with wood grain texture -->
+  <rect width="500" height="250" fill="url(#bgGradient)"/>
+  
+  <!-- Wood grain horizontal lines -->
+  <g opacity="0.15">
+    <line x1="0" y1="10" x2="500" y2="10" stroke="#1a1a1a" stroke-width="1"/>
+    <line x1="0" y1="20" x2="500" y2="20" stroke="#1a1a1a" stroke-width="0.8"/>
+    <line x1="0" y1="30" x2="500" y2="30" stroke="#1a1a1a" stroke-width="0.6"/>
+    <line x1="0" y1="40" x2="500" y2="40" stroke="#1a1a1a" stroke-width="0.5"/>
+    <line x1="0" y1="50" x2="500" y2="50" stroke="#1a1a1a" stroke-width="0.4"/>
+    <line x1="0" y1="60" x2="500" y2="60" stroke="#1a1a1a" stroke-width="0.3"/>
+    <line x1="0" y1="70" x2="500" y2="70" stroke="#1a1a1a" stroke-width="0.3"/>
+    <line x1="0" y1="80" x2="500" y2="80" stroke="#1a1a1a" stroke-width="0.2"/>
+    <line x1="0" y1="90" x2="500" y2="90" stroke="#1a1a1a" stroke-width="0.2"/>
+    <line x1="0" y1="100" x2="500" y2="100" stroke="#1a1a1a" stroke-width="0.2"/>
+  </g>
+  
+  <!-- Main logo group -->
+  <g transform="translate(40, 60)">
+    
+    <!-- mbogo text with 3D effect -->
+    <g filter="url(#shadow3D)">
+      <!-- m -->
+      <text x="0" y="60" font-family="'Arial Black', Arial, sans-serif" font-size="56" font-weight="900" fill="url(#greenGradient)">m</text>
+      
+      <!-- b -->
+      <text x="35" y="60" font-family="'Arial Black', Arial, sans-serif" font-size="56" font-weight="900" fill="url(#greenGradient)">b</text>
+      
+      <!-- o (first o) with stylized extension -->
+      <text x="70" y="60" font-family="'Arial Black', Arial, sans-serif" font-size="56" font-weight="900" fill="url(#greenGradient)">o</text>
+      
+      <!-- Stylized o extension/flourish connecting to bull -->
+      <path d="M 105 35 Q 115 20, 130 25 Q 140 30, 145 40" 
+            stroke="url(#greenGradient)" 
+            stroke-width="4" 
+            fill="none" 
+            stroke-linecap="round"
+            filter="url(#greenGlow)"/>
+      
+      <!-- g -->
+      <text x="100" y="60" font-family="'Arial Black', Arial, sans-serif" font-size="56" font-weight="900" fill="url(#greenGradient)">g</text>
+      
+      <!-- o (second o) -->
+      <text x="135" y="60" font-family="'Arial Black', Arial, sans-serif" font-size="56" font-weight="900" fill="url(#greenGradient)">o</text>
+    </g>
+    
+    <!-- Bull head icon (white, minimalist, connected to the o flourish) -->
+    <g transform="translate(150, 15)" filter="url(#shadow3D)">
+      <!-- Bull head silhouette (profile view) -->
+      <path d="M 0 50 
+               L 8 45 
+               L 15 38 
+               L 20 30 
+               L 22 22 
+               L 25 18 
+               L 28 20 
+               L 30 25 
+               L 32 32 
+               L 35 40 
+               L 40 48 
+               L 45 50 
+               Z" 
+            fill="white" 
+            opacity="0.98"/>
+      
+      <!-- Front horn (crescent, prominent) -->
+      <path d="M 22 22 
+               Q 18 10, 12 4 
+               Q 8 0, 4 2 
+               Q 2 6, 4 10 
+               Q 6 14, 10 16 
+               Q 14 18, 18 20 
+               Q 20 21, 22 22" 
+            fill="white" 
+            opacity="0.98"/>
+      
+      <!-- Back horn (partially visible) -->
+      <path d="M 25 20 
+               Q 28 12, 32 8 
+               Q 35 5, 38 3 
+               Q 36 7, 34 11 
+               Q 32 15, 30 18 
+               Q 28 19, 25 20" 
+            fill="white" 
+            opacity="0.75"/>
+      
+      <!-- Ear -->
+      <ellipse cx="28" cy="35" rx="4" ry="5" fill="white" opacity="0.95"/>
+      
+      <!-- Snout detail -->
+      <ellipse cx="38" cy="42" rx="6" ry="4" fill="white" opacity="0.9"/>
+      
+      <!-- Eye -->
+      <circle cx="26" cy="32" r="2" fill="#1a1a1a"/>
+    </g>
+    
+    <!-- Horizontal green line under mbogo -->
+    <line x1="0" y1="75" x2="170" y2="75" 
+          stroke="url(#greenGradient)" 
+          stroke-width="3" 
+          stroke-linecap="round"
+          filter="url(#greenGlow)"/>
+    
+    <!-- BRANDS text (white with green shadow) -->
+    <g filter="url(#shadow3D)">
+      <text x="175" y="75" 
+            font-family="Arial, sans-serif" 
+            font-size="28" 
+            font-weight="700" 
+            fill="white" 
+            opacity="0.98">BRANDS</text>
+    </g>
+    
+    <!-- Tagline: Create. Print. Inspire. -->
+    <text x="0" y="110" 
+          font-family="Arial, sans-serif" 
+          font-size="16" 
+          font-weight="400" 
+          fill="white" 
+          opacity="0.9"
+          filter="url(#shadow3D)">Create. Print. Inspire.</text>
+  </g>
+</svg>

@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#00ff88">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="description" content="mbogo BRANDS - Create. Print. Inspire. Leading graphics, design, and branding company in Nairobi, Kenya">
+    <title>mbogo BRANDS - Create. Print. Inspire.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#home" class="logo">
+                    <img src="logo.svg" alt="mbogo BRANDS Logo" class="logo-img" onerror="this.src='logo.png'">
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                    <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="animated-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        <div class="hero-animated-graphics">
+            <!-- Animated Print SVG -->
+            <svg class="animated-graphic print-graphic" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <g class="print-animation">
+                    <rect class="printer-base" x="40" y="120" width="120" height="60" rx="5" fill="#00ff88"/>
+                    <rect class="printer-top" x="50" y="40" width="100" height="80" rx="5" fill="#00ff88"/>
+                    <rect class="paper" x="60" y="50" width="80" height="60" fill="#ffffff"/>
+                    <circle class="button" cx="140" cy="70" r="5" fill="#1a1a1a"/>
+                    <path class="paper-out" d="M 60 110 L 60 130 L 140 130 L 140 110" stroke="#ffffff" stroke-width="3" fill="none"/>
+                </g>
+            </svg>
+            <!-- Animated Design SVG -->
+            <svg class="animated-graphic design-graphic" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <g class="design-animation">
+                    <circle class="design-circle-1" cx="100" cy="100" r="40" fill="none" stroke="#00ff88" stroke-width="4"/>
+                    <circle class="design-circle-2" cx="100" cy="100" r="60" fill="none" stroke="#00ff88" stroke-width="3" opacity="0.6"/>
+                    <path class="design-path" d="M 60 100 Q 100 60 140 100 Q 100 140 60 100" fill="none" stroke="#00ff88" stroke-width="3"/>
+                    <circle class="design-dot" cx="100" cy="100" r="6" fill="#00ff88"/>
+                </g>
+            </svg>
+            <!-- Animated Branding SVG -->
+            <svg class="animated-graphic branding-graphic" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <g class="branding-animation">
+                    <rect class="brand-box-1" x="60" y="60" width="80" height="80" rx="5" fill="none" stroke="#00ff88" stroke-width="4"/>
+                    <rect class="brand-box-2" x="70" y="70" width="60" height="60" rx="5" fill="none" stroke="#00ff88" stroke-width="3" opacity="0.7"/>
+                    <path class="brand-star" d="M 100 50 L 105 65 L 120 65 L 108 75 L 113 90 L 100 80 L 87 90 L 92 75 L 80 65 L 95 65 Z" fill="#00ff88"/>
+                </g>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-brand">mbogo</span>
+                    <span class="hero-brands">BRANDS</span>
+                </h1>
+                <p class="hero-tagline">Create. Print. Inspire.</p>
+                <p class="hero-description">Transforming visions into powerful brand identities through innovative graphics, design, and branding solutions in Nairobi, Kenya.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Get Started</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#portfolio" class="btn btn-secondary">
+                        <span>View Our Work</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Comprehensive design solutions for your brand</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-service="graphic-design">
+                    <div class="service-icon-wrapper">
+                        <svg class="service-icon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="icon-circle" cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="3"/>
+                            <path class="icon-path" d="M 30 50 L 45 35 L 55 45 L 70 30" stroke="currentColor" stroke-width="3" fill="none"/>
+                            <circle class="icon-dot" cx="30" cy="50" r="4" fill="currentColor"/>
+                            <circle class="icon-dot" cx="70" cy="30" r="4" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Graphic Design</h3>
+                    <p class="service-description">Creative visual solutions including logos, brochures, flyers, posters, and digital graphics that capture your brand's essence.</p>
+                    <button class="service-btn">Learn More →</button>
+                </div>
+                <div class="service-card" data-service="print">
+                    <div class="service-icon-wrapper">
+                        <svg class="service-icon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect class="printer-icon-base" x="20" y="60" width="60" height="30" rx="3" fill="none" stroke="currentColor" stroke-width="3"/>
+                            <rect class="printer-icon-top" x="25" y="20" width="50" height="40" rx="3" fill="none" stroke="currentColor" stroke-width="3"/>
+                            <rect class="paper-icon" x="30" y="25" width="40" height="30" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle class="button-icon" cx="65" cy="35" r="3" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Print Services</h3>
+                    <p class="service-description">High-quality printing solutions for business cards, banners, signage, packaging, and all your marketing materials.</p>
+                    <button class="service-btn">Learn More →</button>
+                </div>
+                <div class="service-card" data-service="branding">
+                    <div class="service-icon-wrapper">
+                        <svg class="service-icon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect class="brand-icon-box" x="25" y="25" width="50" height="50" rx="5" fill="none" stroke="currentColor" stroke-width="3"/>
+                            <path class="brand-icon-star" d="M 50 15 L 53 28 L 66 28 L 56 36 L 59 49 L 50 40 L 41 49 L 44 36 L 34 28 L 47 28 Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Brand Identity</h3>
+                    <p class="service-description">Complete brand identity packages including logo design, color palettes, typography, and brand guidelines.</p>
+                    <button class="service-btn">Learn More →</button>
+                </div>
+                <div class="service-card" data-service="digital">
+                    <div class="service-icon-wrapper">
+                        <svg class="service-icon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect class="screen-icon" x="20" y="25" width="60" height="45" rx="3" fill="none" stroke="currentColor" stroke-width="3"/>
+                            <rect class="screen-inner" x="25" y="30" width="50" height="35" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <rect class="stand-icon" x="45" y="70" width="10" height="15" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Digital Design</h3>
+                    <p class="service-description">Modern digital designs for social media, websites, mobile apps, and online marketing campaigns.</p>
+                    <button class="service-btn">Learn More →</button>
+                </div>
+                <div class="service-card" data-service="packaging">
+                    <div class="service-icon-wrapper">
+                        <svg class="service-icon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <path class="box-icon" d="M 30 30 L 50 20 L 70 30 L 70 70 L 50 80 L 30 70 Z" fill="none" stroke="currentColor" stroke-width="3"/>
+                            <path class="box-top" d="M 30 30 L 50 20 L 70 30" stroke="currentColor" stroke-width="2"/>
+                            <line class="box-line" x1="50" y1="20" x2="50" y2="80" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Packaging Design</h3>
+                    <p class="service-description">Eye-catching packaging designs that make your products stand out on the shelf and connect with customers.</p>
+                    <button class="service-btn">Learn More →</button>
+                </div>
+                <div class="service-card" data-service="strategy">
+                    <div class="service-icon-wrapper">
+                        <svg class="service-icon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="target-outer" cx="50" cy="50" r="35" fill="none" stroke="currentColor" stroke-width="3"/>
+                            <circle class="target-middle" cx="50" cy="50" r="25" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle class="target-center" cx="50" cy="50" r="15" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Brand Strategy</h3>
+                    <p class="service-description">Strategic brand consulting to help define your brand positioning, messaging, and visual direction.</p>
+                    <button class="service-btn">Learn More →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Portfolio</h2>
+                <p class="section-subtitle">Showcasing our creative excellence</p>
+            </div>
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="print">Print</button>
+                <button class="filter-btn" data-filter="digital">Digital</button>
+                <button class="filter-btn" data-filter="packaging">Packaging</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop&q=80" alt="Corporate Brand Identity" loading="lazy">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Corporate Brand Identity</h3>
+                        <p class="portfolio-category">Branding</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="print">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=600&fit=crop&q=80" alt="Marketing Materials" loading="lazy">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Marketing Materials</h3>
+                        <p class="portfolio-category">Print</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="digital">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=600&fit=crop&q=80" alt="Social Media Campaign" loading="lazy">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Social Media Campaign</h3>
+                        <p class="portfolio-category">Digital</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="packaging">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop" alt="Product Packaging" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop'; this.onerror=null;" style="display: block; width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Product Packaging</h3>
+                        <p class="portfolio-category">Packaging</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop&q=80" alt="Logo & Identity" loading="lazy">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Logo & Identity</h3>
+                        <p class="portfolio-category">Branding</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="print">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=800&h=600&fit=crop&q=80" alt="Business Stationery" loading="lazy">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Business Stationery</h3>
+                        <p class="portfolio-category">Print</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M18 6L6 18M6 6l12 12"/>
+            </svg>
+        </button>
+        <div class="lightbox-content">
+            <div class="lightbox-image" id="lightboxImage"></div>
+            <div class="lightbox-info">
+                <h3 class="lightbox-title" id="lightboxTitle"></h3>
+                <p class="lightbox-category" id="lightboxCategory"></p>
+                <p class="lightbox-description" id="lightboxDescription"></p>
+            </div>
+        </div>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </button>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Pricing</h2>
+                <p class="section-subtitle">Transparent pricing for world-class design services in Kenya</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Logo Design</h3>
+                        <div class="pricing-price">
+                            <span class="currency">KES</span>
+                            <span class="amount">15,000</span>
+                            <span class="period">- 50,000</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ 3-5 Initial Concepts</li>
+                        <li>✓ 3 Revisions</li>
+                        <li>✓ Final Files (AI, PNG, SVG)</li>
+                        <li>✓ Color Variations</li>
+                        <li>✓ 1 Week Delivery</li>
+                    </ul>
+                    <button class="btn btn-pricing">Get Started</button>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Complete Brand Identity</h3>
+                        <div class="pricing-price">
+                            <span class="currency">KES</span>
+                            <span class="amount">80,000</span>
+                            <span class="period">- 200,000</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Logo Design</li>
+                        <li>✓ Color Palette</li>
+                        <li>✓ Typography Selection</li>
+                        <li>✓ Brand Guidelines Document</li>
+                        <li>✓ Business Card Design</li>
+                        <li>✓ Letterhead & Envelope</li>
+                        <li>✓ 2-3 Weeks Delivery</li>
+                    </ul>
+                    <button class="btn btn-pricing">Get Started</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Print Services</h3>
+                        <div class="pricing-price">
+                            <span class="currency">KES</span>
+                            <span class="amount">5,000</span>
+                            <span class="period">- 150,000</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Business Cards (500pcs): KES 3,500</li>
+                        <li>✓ Flyers (1000pcs): KES 8,000</li>
+                        <li>✓ Brochures (500pcs): KES 25,000</li>
+                        <li>✓ Banners (per sqm): KES 2,500</li>
+                        <li>✓ Posters (A2): KES 500/pc</li>
+                        <li>✓ Custom Quotes Available</li>
+                    </ul>
+                    <button class="btn btn-pricing">Get Quote</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Packaging Design</h3>
+                        <div class="pricing-price">
+                            <span class="currency">KES</span>
+                            <span class="amount">40,000</span>
+                            <span class="period">- 120,000</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Package Structure Design</li>
+                        <li>✓ Label Design</li>
+                        <li>✓ 3D Mockups</li>
+                        <li>✓ Print-Ready Files</li>
+                        <li>✓ Material Recommendations</li>
+                        <li>✓ 2-3 Weeks Delivery</li>
+                    </ul>
+                    <button class="btn btn-pricing">Get Started</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Digital Design</h3>
+                        <div class="pricing-price">
+                            <span class="currency">KES</span>
+                            <span class="amount">20,000</span>
+                            <span class="period">- 100,000</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Social Media Graphics</li>
+                        <li>✓ Web Banner Design</li>
+                        <li>✓ Email Templates</li>
+                        <li>✓ Mobile App UI Design</li>
+                        <li>✓ Digital Ad Campaigns</li>
+                        <li>✓ 1-2 Weeks Delivery</li>
+                    </ul>
+                    <button class="btn btn-pricing">Get Started</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Brand Strategy</h3>
+                        <div class="pricing-price">
+                            <span class="currency">KES</span>
+                            <span class="amount">150,000</span>
+                            <span class="period">+</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Brand Audit & Research</li>
+                        <li>✓ Market Analysis</li>
+                        <li>✓ Brand Positioning</li>
+                        <li>✓ Messaging Strategy</li>
+                        <li>✓ Competitive Analysis</li>
+                        <li>✓ Custom Timeline</li>
+                    </ul>
+                    <button class="btn btn-pricing">Contact Us</button>
+                </div>
+            </div>
+            <div class="pricing-note">
+                <p>💡 All prices are in Kenyan Shillings (KES). Custom packages available. Contact us for detailed quotes tailored to your specific needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Trusted by businesses across Kenya</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">mbogo BRANDS transformed our entire brand identity. Their attention to detail and creative vision exceeded our expectations. Our new logo and brand guidelines have made a huge impact on our business.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SM</div>
+                            <div class="author-info">
+                                <h4 class="author-name">Sarah Mwangi</h4>
+                                <p class="author-role">CEO, TechStart Kenya</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">★★★★★</div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">Working with mbogo BRANDS was a game-changer. They understood our vision and brought it to life with stunning designs. The packaging design they created helped us stand out in the market.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JK</div>
+                            <div class="author-info">
+                                <h4 class="author-name">James Kariuki</h4>
+                                <p class="author-role">Founder, Nairobi Naturals</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">★★★★★</div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">Professional, creative, and reliable. mbogo BRANDS delivered our complete brand identity package on time and within budget. Highly recommend their services to any business looking to elevate their brand.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AN</div>
+                            <div class="author-info">
+                                <h4 class="author-name">Amina Njoroge</h4>
+                                <p class="author-role">Marketing Director, GreenLife Foods</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials-nav">
+                <button class="testimonial-nav-btn active" data-slide="0"></button>
+                <button class="testimonial-nav-btn" data-slide="1"></button>
+                <button class="testimonial-nav-btn" data-slide="2"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Process</h2>
+                <p class="section-subtitle">How we bring your brand vision to life</p>
+            </div>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Discovery</h3>
+                        <p class="step-description">We start by understanding your business, goals, target audience, and brand vision through detailed consultations.</p>
+                    </div>
+                    <div class="step-icon">🔍</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Strategy</h3>
+                        <p class="step-description">We develop a comprehensive brand strategy, positioning, and creative direction tailored to your market.</p>
+                    </div>
+                    <div class="step-icon">💡</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Design</h3>
+                        <p class="step-description">Our creative team brings the strategy to life with stunning designs, multiple concepts, and iterations.</p>
+                    </div>
+                    <div class="step-icon">🎨</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Refinement</h3>
+                        <p class="step-description">We collaborate with you to refine and perfect every detail until the design exceeds your expectations.</p>
+                    </div>
+                    <div class="step-icon">✨</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">05</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Delivery</h3>
+                        <p class="step-description">We deliver all final files, brand guidelines, and assets ready for implementation across all platforms.</p>
+                    </div>
+                    <div class="step-icon">🚀</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About mbogo BRANDS</h2>
+                    <p class="about-description">
+                        Based in the heart of Nairobi, Kenya, mbogo BRANDS is a creative powerhouse dedicated to transforming businesses through exceptional design and branding. We combine artistic vision with strategic thinking to create brands that not only look great but also resonate deeply with their audiences.
+                    </p>
+                    <p class="about-description">
+                        Our team of talented designers and brand strategists work closely with clients across various industries, from startups to established enterprises, delivering solutions that drive growth and inspire action.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">200+</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-placeholder">
+                        <div class="about-logo-preview">
+                            <span class="preview-text">mbogo</span>
+                            <span class="preview-icon">🐂</span>
+                            <span class="preview-brands">BRANDS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2 class="newsletter-title">Stay Updated</h2>
+                    <p class="newsletter-subtitle">Get the latest design trends, tips, and exclusive offers delivered to your inbox</p>
+                </div>
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="newsletter-input-wrapper">
+                        <input type="email" id="newsletterEmail" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary">
+                            <span>Subscribe</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="newsletter-privacy">We respect your privacy. Unsubscribe at any time.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logos Section -->
+    <section class="clients">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Trusted By</h2>
+                <p class="section-subtitle">Leading brands across Kenya trust mbogo BRANDS</p>
+            </div>
+            <div class="clients-grid">
+                <div class="client-logo">
+                    <div class="client-placeholder">TechStart Kenya</div>
+                </div>
+                <div class="client-logo">
+                    <div class="client-placeholder">Nairobi Naturals</div>
+                </div>
+                <div class="client-logo">
+                    <div class="client-placeholder">GreenLife Foods</div>
+                </div>
+                <div class="client-logo">
+                    <div class="client-placeholder">Kenya Ventures</div>
+                </div>
+                <div class="client-logo">
+                    <div class="client-placeholder">Afrika Design Co</div>
+                </div>
+                <div class="client-logo">
+                    <div class="client-placeholder">Safari Brands</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Everything you need to know about our services</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How long does a typical branding project take?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>A complete brand identity package typically takes 2-3 weeks, while a simple logo design can be completed within 1 week. Timeline depends on project complexity and client feedback turnaround time.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you provide print services or just design?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We offer both design and print services! We can design your materials and handle the printing, or provide print-ready files if you prefer to print elsewhere. Our print services include business cards, flyers, brochures, banners, and more.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What file formats do you provide?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We provide all standard file formats including AI (Adobe Illustrator), EPS, PDF, PNG (transparent and various sizes), SVG, and JPG. We also provide brand guidelines documents in PDF format.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can you work with international clients?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! While we're based in Nairobi, Kenya, we work with clients worldwide. We conduct meetings via video calls and deliver all work digitally. Payment can be made through various international payment methods.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What's included in a brand identity package?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our complete brand identity package includes logo design, color palette selection, typography choices, brand guidelines document, business card design, letterhead, envelope design, and social media profile templates.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you offer payment plans?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we offer flexible payment plans for larger projects. Typically, we require a 50% deposit to begin work, with the balance due upon project completion. For projects over KES 200,000, we can arrange installment payments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's bring your brand vision to life</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>Nairobi, Kenya</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>info@mbogobrands.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p>+254 700 000 000</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🕒</div>
+                        <div class="contact-details">
+                            <h3>Working Hours</h3>
+                            <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                            <p>Sat: 10:00 AM - 4:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone">
+                    </div>
+                    <div class="form-group">
+                        <select id="service" name="service" required>
+                            <option value="">Select a Service</option>
+                            <option value="graphic-design">Graphic Design</option>
+                            <option value="print-services">Print Services</option>
+                            <option value="brand-identity">Brand Identity</option>
+                            <option value="digital-design">Digital Design</option>
+                            <option value="packaging">Packaging Design</option>
+                            <option value="brand-strategy">Brand Strategy</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your project" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="logo.svg" alt="mbogo BRANDS Logo" class="logo-img" onerror="this.src='logo.png'">
+                    </div>
+                    <p class="footer-tagline">Create. Print. Inspire.</p>
+                    <p class="footer-description">Transforming brands through creative excellence in Nairobi, Kenya.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#services">Graphic Design</a></li>
+                        <li><a href="#services">Print Services</a></li>
+                        <li><a href="#services">Brand Identity</a></li>
+                        <li><a href="#services">Digital Design</a></li>
+                        <li><a href="#services">Packaging Design</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://facebook.com/mbogobrands" class="social-link social-facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                            <span class="social-label">Facebook</span>
+                        </a>
+                        <a href="https://instagram.com/mbogobrands" class="social-link social-instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                            <span class="social-label">Instagram</span>
+                        </a>
+                        <a href="https://twitter.com/mbogobrands" class="social-link social-twitter" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                            <span class="social-label">Twitter</span>
+                        </a>
+                        <a href="https://linkedin.com/company/mbogobrands" class="social-link social-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                            <span class="social-label">LinkedIn</span>
+                        </a>
+                        <a href="https://youtube.com/@mbogobrands" class="social-link social-youtube" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                            <span class="social-label">YouTube</span>
+                        </a>
+                        <a href="https://wa.me/254700000000" class="social-link social-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
+                            <span class="social-label">WhatsApp</span>
+                        </a>
+                    </div>
+                    <p class="footer-email">info@mbogobrands.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 mbogo BRANDS. All rights reserved.</p>
+                <p>Nairobi, Kenya</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <!-- Floating Action Button -->
+    <div class="fab-container">
+        <button class="fab-main" id="fabMain" aria-label="Quick actions">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M12 5v14M5 12h14"/>
+            </svg>
+        </button>
+        <div class="fab-menu" id="fabMenu">
+            <a href="tel:+254700000000" class="fab-item" title="Call Us">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+            </a>
+            <a href="mailto:info@mbogobrands.com" class="fab-item" title="Email Us">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                </svg>
+            </a>
+            <a href="#contact" class="fab-item" title="Get Quote">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+            </a>
+            <a href="https://wa.me/254700000000" class="fab-item" title="WhatsApp" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <div class="loader-logo">
+                <img src="logo.svg" alt="mbogo BRANDS Logo" class="loader-logo-img" onerror="this.src='logo.png'">
+            </div>
+            <div class="loader-progress">
+                <div class="loader-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
