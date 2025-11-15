@@ -747,8 +747,17 @@ function initLightbox() {
         openLightbox(currentIndex);
     }
     
-    // Open lightbox on portfolio item click
+    // Portfolio Items
     portfolioItems.forEach((item, index) => {
+        item.addEventListener('mouseenter', () => {
+            item.style.transform = 'scale(1.05)';
+        });
+
+        item.addEventListener('mouseleave', () => {
+            item.style.transform = 'scale(1)';
+        });
+
+        // Open lightbox on click
         item.addEventListener('click', () => {
             openLightbox(index);
         });

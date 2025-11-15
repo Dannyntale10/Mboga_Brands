@@ -93,7 +93,19 @@ body.light-mode {
     --gradient-bg: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
 }
 
-/* Light Mode Specific Enhancements */
+/* Navbar */
+.navbar {
+    background: rgba(10, 10, 10, 0.9);
+    backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.navbar.scrolled {
+    background: rgba(10, 10, 10, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 255, 136, 0.1);
+}
+
 body.light-mode .navbar {
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(20px) saturate(180%);
@@ -162,22 +174,6 @@ body.light-mode .shape-2 {
 
 body.light-mode .shape-3 {
     background: rgba(6, 182, 212, 0.12);
-}
-
-/* Light Mode Section Backgrounds */
-body.light-mode .services,
-body.light-mode .portfolio,
-body.light-mode .about,
-body.light-mode .testimonials,
-body.light-mode .clients,
-body.light-mode .faq {
-    background: #fafafa;
-}
-
-body.light-mode .pricing,
-body.light-mode .process,
-body.light-mode .contact {
-    background: #ffffff;
 }
 
 /* Light Mode Cards with Subtle Borders */
@@ -570,11 +566,17 @@ body.light-mode::before {
     right: 0;
     bottom: 0;
     background-image: 
-        radial-gradient(circle at 20% 50%, rgba(0, 255, 136, 0.03) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.03) 0%, transparent 50%),
-        radial-gradient(circle at 40% 20%, rgba(6, 182, 212, 0.03) 0%, transparent 50%);
+        radial-gradient(circle at 20% 50%, rgba(0, 255, 136, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.06) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(59, 130, 246, 0.06) 0%, transparent 50%);
     pointer-events: none;
     z-index: -1;
+    animation: backgroundPulse 12s ease-in-out infinite;
+}
+
+@keyframes backgroundPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
 }
 
 /* Reset & Base Styles */
@@ -596,6 +598,23 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     transition: background 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+    animation: backgroundPulse 15s ease-in-out infinite;
 }
 
 .container {
@@ -794,6 +813,26 @@ body.light-mode .dark-mode-toggle .moon-icon {
     z-index: 0;
 }
 
+.hero-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(0, 255, 136, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.12) 0%, transparent 60%);
+    animation: pulseGlow 8s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes pulseGlow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
 .animated-shapes {
     position: absolute;
     width: 100%;
@@ -843,6 +882,18 @@ body.light-mode .dark-mode-toggle .moon-icon {
     33% { transform: translate(30px, -30px) scale(1.1); }
     66% { transform: translate(-20px, 20px) scale(0.9); }
 }
+
+@keyframes pulseGlow {
+    0%, 100% { 
+        opacity: 0.3;
+        filter: blur(60px) brightness(1);
+    }
+    50% { 
+        opacity: 0.6;
+        filter: blur(60px) brightness(1.5);
+    }
+}
+
 
 .hero-animated-graphics {
     position: absolute;
@@ -1122,6 +1173,7 @@ section {
     50% { background-position: 100% 50%; }
 }
 
+
 .section-subtitle {
     font-size: 1.2rem;
     color: var(--text-secondary);
@@ -1197,6 +1249,18 @@ section {
     background: var(--service-gradient, linear-gradient(135deg, rgba(0, 255, 136, 0.1) 0%, transparent 100%));
     opacity: 0;
     transition: opacity 0.3s ease;
+}
+
+.service-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 2.5rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
 }
 
 .service-card:hover {
@@ -1301,8 +1365,7 @@ section {
 .filter-btn.active {
     background: var(--primary-green);
     color: var(--bg-dark);
-    border-color: var(--primary-green);
-    transform: translateY(-2px);
+    border-color: transparent;
     box-shadow: var(--shadow-glow);
 }
 
@@ -1344,6 +1407,11 @@ section {
     background: var(--bg-card);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     min-height: 300px;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-glow);
 }
 
 .portfolio-item[data-category="packaging"] {
@@ -1527,6 +1595,12 @@ section {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-green);
+    box-shadow: var(--shadow-glow);
 }
 
 .pricing-card::before {
@@ -2578,17 +2652,6 @@ section {
     border-radius: 50%;
     filter: blur(70px);
     animation: pulseGlow 5s ease-in-out infinite reverse;
-}
-
-@keyframes pulseGlow {
-    0%, 100% {
-        transform: scale(1);
-        opacity: 0.6;
-    }
-    50% {
-        transform: scale(1.2);
-        opacity: 0.8;
-    }
 }
 
 .newsletter-content {
@@ -3985,7 +4048,7 @@ section {
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--bg-darker);
+    background: var(--bg-secondary);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -3994,7 +4057,7 @@ section {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--primary-green-light);
+    background: var(--primary-green-dark);
 }
 
 /* Selection */
